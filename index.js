@@ -42,7 +42,6 @@ function getCurrentImageIndex() {
 
 function updateRadioButton() {
   const index = getCurrentImageIndex();
-  console.log(index);
   const radios = document.querySelectorAll("input");
 
   const radio = [...radios].filter((item) => item.id === index);
