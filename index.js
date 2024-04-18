@@ -1,5 +1,6 @@
 const rightArrow = document.querySelector(".arrow.right");
 const leftArrow = document.querySelector(".arrow.left");
+
 function nextImage() {
   const lastImg = document.querySelector(".images").lastElementChild;
   const currentImg = document.querySelector(".image.active");
@@ -34,10 +35,26 @@ function previousImage() {
   toggleImages();
 }
 
+function getCurrentImageIndex() {
+  const currentImgIndex = document.querySelector(".image.active").dataset.index;
+  return currentImgIndex;
+}
+
+function updateRadioButton() {
+  const index = getCurrentImageIndex();
+  console.log(index);
+  const radios = document.querySelectorAll("input");
+
+  const radio = [...radios].filter((item) => item.id === index);
+  radio[0].checked = true;
+}
+
 rightArrow.addEventListener("click", () => {
   nextImage();
+  updateRadioButton();
 });
 
 leftArrow.addEventListener("click", () => {
   previousImage();
+  updateRadioButton();
 });
