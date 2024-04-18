@@ -15,7 +15,7 @@ html {
 .container {
   margin: 0 auto;
   height: 50rem;
-  width: 60rem;
+  width: 80rem;
   display: flex;
   flex-direction: column;
   background-color: #313c42;
@@ -46,8 +46,8 @@ html {
 }
 
 img {
-  width: auto;
-  height: 25rem;
+  width: 55rem;
+  height: auto;
 }
 
 .arrow {
