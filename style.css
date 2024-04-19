@@ -38,11 +38,17 @@ html {
 }
 
 .image {
-  display: none;
+  position: absolute;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  opacity: 0;
 }
 
-.active {
+.image.active {
+  opacity: 1;
+  z-index: 1;
   display: unset;
+  transition-delay: 0ms;
 }
 
 img {
@@ -64,4 +70,6 @@ img {
 
 .radios {
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
