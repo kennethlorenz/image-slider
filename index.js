@@ -1,6 +1,27 @@
 const rightArrow = document.querySelector(".arrow.right");
 const leftArrow = document.querySelector(".arrow.left");
 
+const radioButtons = document.querySelectorAll("input");
+
+function displayImage(index) {
+  const images = document.querySelectorAll(".image");
+
+  images.forEach((item) => {
+    if (item.dataset.index === index) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+}
+
+radioButtons.forEach((item) => {
+  const { id } = item;
+  item.addEventListener("click", () => {
+    displayImage(id);
+  });
+});
+
 function nextImage() {
   const lastImg = document.querySelector(".images").lastElementChild;
   const currentImg = document.querySelector(".image.active");
