@@ -14,8 +14,8 @@ html {
 
 .container {
   margin: 0 auto;
-  height: 50rem;
-  width: 80rem;
+  height: 100vh;
+  width: 100rem;
   display: flex;
   flex-direction: column;
   background-color: #313c42;
@@ -52,7 +52,7 @@ html {
 }
 
 img {
-  width: 55rem;
+  width: 75rem;
   height: auto;
 }
 
@@ -71,4 +71,8 @@ img {
 .radios {
   margin: 0 auto;
   z-index: 2;
+}
+
+input[type="radio"] {
+  accent-color: #313c42;
 }
