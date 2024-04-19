@@ -69,12 +69,22 @@ function updateRadioButton() {
   radio[0].checked = true;
 }
 
-rightArrow.addEventListener("click", () => {
+function nextSlide() {
   nextImage();
   updateRadioButton();
+}
+
+function previousSlide() {
+  previousImage();
+  updateRadioButton();
+}
+
+rightArrow.addEventListener("click", () => {
+  nextSlide();
 });
 
 leftArrow.addEventListener("click", () => {
-  previousImage();
-  updateRadioButton();
+  previousSlide();
 });
+
+setInterval(nextSlide, 5000);
